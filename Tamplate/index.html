@@ -3,9 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Suno Na Baby... ❤️</title>
+    
+    <!-- PRIMARY META TAGS (SEO) -->
+    <title>Happy Propose Day Baby | A Special Surprise for You ❤️</title>
+    <meta name="title" content="Happy Propose Day Baby | A Special Surprise for You ❤️">
+    <meta name="description" content="A romantic and interactive Propose Day surprise website. An interactive way to say 'I Love You' with a fun runaway No button and a beautiful rose surprise.">
+    <meta name="keywords" content="Propose Day, Love Proposal, Valentine's Day, Surprise Website, Romantic Message, Interactive Proposal, Love Letter Hindi">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="Hindi">
+    <meta name="author" content="Your Name">
+
+    <!-- OPEN GRAPH / FACEBOOK / WHATSAPP (Link previews) -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://your-site-url.onrender.com/"> <!-- Apne Render link se badlein -->
+    <meta property="og:title" content="Sunno na Baby... Ek baat kehni thi ❤️">
+    <meta property="og:description" content="Maine tumhare liye ek chota sa surprise banaya hai. Click karke dekho!">
+    <meta property="og:image" content="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/72x72/2764.png"> <!-- Heart Icon -->
+
+    <!-- TWITTER -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="A Special Propose Day Surprise">
+    <meta property="twitter:description" content="An interactive romantic experience for my love.">
+
+    <!-- STYLING & FONTS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    
     <style>
         body {
             font-family: 'Poppins', sans-serif;
@@ -18,8 +41,6 @@
             touch-action: manipulation;
         }
         .cursive { font-family: 'Dancing Script', cursive; }
-        
-        /* Floating hearts in background */
         .heart-bg {
             position: fixed;
             top: -10%;
@@ -32,8 +53,6 @@
         @keyframes fall {
             to { transform: translateY(110vh) rotate(360deg); }
         }
-
-        /* Highlight animation for messages */
         .message-pop {
             animation: popIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
@@ -41,13 +60,8 @@
             0% { transform: scale(0.8); opacity: 0; }
             100% { transform: scale(1); opacity: 1; }
         }
-
         .hidden-screen { display: none; }
-
-        /* Rose container */
-        .rose-container {
-            animation: fadeInUp 1s ease-out;
-        }
+        .rose-container { animation: fadeInUp 1s ease-out; }
         @keyframes fadeInUp {
             from { opacity: 0; transform: translateY(30px); }
             to { opacity: 1; transform: translateY(0); }
@@ -56,7 +70,6 @@
 </head>
 <body class="p-4">
 
-    <!-- Container for falling hearts -->
     <div id="bg-hearts"></div>
 
     <!-- SCREEN 1: START -->
@@ -69,9 +82,8 @@
         </button>
     </div>
 
-    <!-- SCREEN 2: PROPOSAL + CLEAR MESSAGES -->
+    <!-- SCREEN 2: PROPOSAL -->
     <div id="screen2" class="hidden-screen text-center z-10 w-full max-w-md">
-        <!-- Message Box (Yeh ekdum saaf dikhega) -->
         <div id="msg-box" class="bg-white/80 border-2 border-pink-300 p-4 rounded-2xl mb-6 min-h-[100px] flex items-center justify-center shadow-lg transition-all">
             <p id="pleading-msg" class="text-pink-600 text-2xl font-bold italic">
                 Will you be mine? ❤️
@@ -94,10 +106,9 @@
         </div>
     </div>
 
-    <!-- SCREEN 3: SUCCESS (ROSE + LETTER) -->
+    <!-- SCREEN 3: SUCCESS -->
     <div id="screen3" class="hidden-screen text-center z-10 w-full max-w-lg pb-10">
         <div class="rose-container mb-6">
-            <!-- SVG Rose -->
             <svg class="w-40 h-40 mx-auto" viewBox="0 0 100 100">
                 <path d="M50 95 Q50 70 50 40" stroke="#065f46" stroke-width="4" fill="none" />
                 <path d="M50 75 Q30 65 40 55" stroke="#059669" stroke-width="3" fill="none" />
@@ -119,36 +130,22 @@
                     <p>Meri pyari Baby,</p>
                     <p>Mujhe pata tha tum mna nahi kar paogi! Aaj mere liye duniya ka sabse khushi ka din hai kyunki tumne haan kaha hai.</p>
                     <p>Main hamesha tumhara haath pakad kar rahunga, har khushi aur har gham mein tumhara saath dunga. Tum sirf meri partner nahi, meri poori duniya ho.</p>
-                    <p>Main vaada karta hoon ki kabhi tumhari aankhon mein aansu nahi aane dunga (khushi ke aansu chhod kar!). I love you hamesha ke liye!</p>
+                    <p>Main vaada karta hoon ki kabhi tumhari aankhon mein aansu nahi aane dunga. I love you hamesha ke liye!</p>
                     <p class="font-bold text-red-500 pt-6 text-right">~ Hamesha Ke Liye Tumhara ❤️</p>
                 </div>
             </div>
         </div>
-
-        <button onclick="location.reload()" class="mt-10 text-pink-500 underline text-sm">Magic firse dekho</button>
     </div>
 
     <script>
         const noMessages = [
-            "Please mna mat karo na... 🥺",
-            "Mat karo na baby... 🙏",
-            "Esa mat karo, please! 😢",
-            "Please mat karo na... 😭",
-            "Kyo kar rhi esa baby? 💔",
-            "Mat karo na... please maan jao 🥺",
-            "Mera dil mat todo baby... 😭",
-            "Sachi mna kar rahi ho? 😔",
-            "Ek baar aur soch lo... hnn? ❤️",
-            "Please baby, sachi ro dunga main... 😭",
-            "Dekho 'Yes' wala button kitna pyara hai! ✨",
-            "Bas ek baar 'Haan' bol do... 😍",
-            "Itna gussa mat dikhao baby... 🙏",
-            "Ab toh maan jao meri jaan! 💍",
-            "Sachi me mna kar diya? Ek baar fir socho! 😭"
+            "Please mna mat karo na... 🥺", "Mat karo na baby... 🙏", "Esa mat karo, please! 😢",
+            "Please mat karo na... 😭", "Kyo kar rhi esa baby? 💔", "Mat karo na... please maan jao 🥺",
+            "Mera dil mat todo baby... 😭", "Sachi mna kar rahi ho? 😔", "Ek baar aur soch lo... hnn? ❤️",
+            "Please baby, sachi ro dunga main... 😭", "Dekho 'Yes' wala button kitna pyara hai! ✨",
+            "Bas ek baar 'Haan' bol do... 😍", "Itna gussa mat dikhao baby... 🙏", "Ab toh maan jao meri jaan! 💍"
         ];
-
-        let noIndex = 0;
-        let yesScale = 1;
+        let noIndex = 0; let yesScale = 1;
 
         function changeScreen(n) {
             document.getElementById('screen1').classList.add('hidden-screen');
@@ -162,46 +159,31 @@
             const yesBtn = document.getElementById('yes-btn');
             const noBtn = document.getElementById('no-btn');
 
-            // Update Message with Visibility Animation
             pleadingTxt.innerText = noMessages[noIndex % noMessages.length];
             noIndex++;
-            
-            // Add pop animation to message
             msgBox.classList.remove('message-pop');
-            void msgBox.offsetWidth; // Trigger reflow
+            void msgBox.offsetWidth;
             msgBox.classList.add('message-pop');
-            msgBox.style.backgroundColor = '#fff';
 
-            // Increase Yes button size
             yesScale += 0.25;
             yesBtn.style.transform = `scale(${yesScale})`;
-            
-            // Make No button harder to hit or smaller
             const noScale = Math.max(0.5, 1 - (noIndex * 0.05));
             noBtn.style.transform = `scale(${noScale})`;
-            
-            if(noIndex > 10) {
-                noBtn.style.opacity = "0.3";
-            }
+            if(noIndex > 10) noBtn.style.opacity = "0.3";
         }
 
         function sayYes() {
             document.getElementById('screen2').classList.add('hidden-screen');
             document.getElementById('screen3').classList.remove('hidden-screen');
-            // Celebration effect
-            for(let i=0; i<30; i++) {
-                setTimeout(createHeart, i * 100);
-            }
+            for(let i=0; i<30; i++) setTimeout(createHeart, i * 100);
         }
 
-        function startHearts() {
-            setInterval(createHeart, 600);
-        }
+        function startHearts() { setInterval(createHeart, 600); }
 
         function createHeart() {
             const heart = document.createElement('div');
             heart.className = 'heart-bg';
-            heart.innerHTML = ['❤️', '💖', '🌹', '✨', '🌸'][Math.floor(Math.random() * 5)];
+            heart.innerHTML = ['❤️', '💖', '🌹', '✨'][Math.floor(Math.random() * 4)];
             heart.style.left = Math.random() * 100 + 'vw';
             heart.style.fontSize = (Math.random() * 20 + 20) + 'px';
             heart.style.animationDuration = (Math.random() * 2 + 3) + 's';
@@ -212,4 +194,3 @@
 </body>
 </html>
 
-  
